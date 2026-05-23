@@ -216,7 +216,9 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     origin: [
-      process.env.CLIENT_URL
+      process.env.CLIENT_URL,
+      "https://risevexa-frontend-zk5j.vercel.app/",
+    "https://risevexa.com"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, 
