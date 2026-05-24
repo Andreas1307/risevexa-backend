@@ -357,9 +357,6 @@ app.get("/verify-payment", async (req, res) => {
   }
 });
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello World" });
-});
 
 app.get("/get-report", async (req, res) => {
   try {
