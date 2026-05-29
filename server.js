@@ -849,9 +849,7 @@ const date = now.toLocaleDateString("en-IE", {
       .optional()
       .or(z.literal("")),
   
-    cv: z
-      .string()
-      .max(2500),
+      cv: z.string().min(20),
   
     qualifications: z
       .string()
@@ -932,10 +930,15 @@ const {
   qualifications
 } = parsedBody.data;
 
-      const safeCV =
-  cv?.length > 2000
-    ? cv.slice(0, 2000) + "...(trimmed)"
-    : cv;
+const MAX_CV_LENGTH = 2500;
+
+const safeCV =
+  typeof cv === "string"
+    ? cv.slice(0, MAX_CV_LENGTH)
+    : "";
+
+
+    
 
 
 
