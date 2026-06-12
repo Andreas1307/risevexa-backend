@@ -301,7 +301,7 @@ app.post("/create-checkout-session", checkoutLimiter ,async (req, res) => {
 
       
 
-      success_url: `${process.env.CLIENT_URL}/dashboard?session_id={CHECKOUT_SESSION_ID}&reportId=${reportId}`,
+      success_url: `${process.env.CLIENT_URL}/dashboard?session_id={CHECKOUT_SESSION_ID}&reportId=${reportId}&sucess=true`,
       cancel_url: `${process.env.CLIENT_URL}/analysis`,
     });
 
