@@ -880,7 +880,7 @@ app.use("/send-user-data", analysisLimiter);
         [userId]
       );
       
-      if (dailyUsage[0].total >= 5) {
+      if (dailyUsage[0].total >= 55) {
         return res.status(429).json({
           error: "Daily analysis limit reached"
         });
